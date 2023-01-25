@@ -4,10 +4,6 @@ import '../styles/form.css';
 class General extends Component {
   constructor(props) {
     super(props);
-
-    this.state = {
-      isSubmitted: false,
-    };
   }
 
   render() {
@@ -19,7 +15,6 @@ class General extends Component {
           type='text'
           name='firstName'
           id='firstName'
-          className='input'
           placeholder='First Name'
           onChange={handleChange}
         />
@@ -27,15 +22,20 @@ class General extends Component {
           type='text'
           name='lastName'
           id='lastName'
-          className='input'
           placeholder='Last Name'
+          onChange={handleChange}
+        />
+        <input
+          type='text'
+          name='currentTitle'
+          id='currentTitle'
+          placeholder='Title'
           onChange={handleChange}
         />
         <input
           type='email'
           name='email'
           id='lastName'
-          className='input'
           placeholder='Email'
           onChange={handleChange}
         />
@@ -43,8 +43,14 @@ class General extends Component {
           type='tel'
           name='phoneNumber'
           id='phoneNumber'
-          className='input'
           placeholder='Phone Number'
+          onChange={handleChange}
+        />
+        <input
+          type='text'
+          name='location'
+          id='location'
+          placeholder='Location'
           onChange={handleChange}
         />
       </fieldset>
