@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import General from './components/General';
-import Resume from './components/Resume';
+import Form from './components/Form';
+import './styles/form.css';
 
 class App extends Component {
   constructor() {
@@ -33,18 +33,14 @@ class App extends Component {
   };
 
   render() {
+    // conditional render > form submitted? show resume
+
     return (
-      <div>
-        <div className='left'>
-          <General
-            onFormSubmit={this.onFormSubmit}
-            user={this.state.user}
-            handleChange={this.handleChange}
-          />
-        </div>
-        <div className='right'>
-          <Resume firstName='hello' />
-        </div>
+      <div id='wrapper'>
+        <Form
+          handleChange={this.handleChange}
+          onFormSubmit={this.onFormSubmit}
+        />
       </div>
     );
   }
