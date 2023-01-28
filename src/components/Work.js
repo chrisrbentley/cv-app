@@ -11,6 +11,7 @@ class Work extends Component {
 
     return (
       <fieldset className='work-experience'>
+        <legend>Work Experience</legend>
         <input
           type='text'
           name='company'
@@ -25,18 +26,27 @@ class Work extends Component {
           placeholder='Title'
           onChange={handleChange}
         />
+
         <input
           type='text'
           name='workStartDate'
-          className='work-start-date'
+          className='workStartDate'
           placeholder='Start Date'
+          onChange={handleChange}
+        />
+
+        <input
+          type='text'
+          name='workEndDate'
+          className='workEndDate'
+          placeholder='End Date'
           onChange={handleChange}
         />
         <input
           type='text'
-          name='workEndDate'
-          className='work-end-date'
-          placeholder='End Date'
+          name='jobDescription'
+          className='job-description'
+          placeholder='Job Description'
           onChange={handleChange}
         />
       </fieldset>

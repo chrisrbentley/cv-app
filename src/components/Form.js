@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import General from './General';
 import Education from './Education';
+import Work from './Work';
 import '../styles/form.css';
 
 class Form extends Component {
@@ -14,11 +15,9 @@ class Form extends Component {
 
     return (
       <form action='' onSubmit={onFormSubmit} id='form'>
-        <h3>General Information</h3>
         <General handleChange={handleChange} />
-        <h3>Education</h3>
         <Education handleChange={handleChange} />
-        <button type='submit'>Submit</button>
+        <Work handleChange={handleChange} />
       </form>
     );
   }

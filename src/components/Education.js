@@ -11,7 +11,7 @@ class Education extends Component {
 
     return (
       <fieldset className='education'>
-        {/* <legend>Education</legend> */}
+        <legend>Education</legend>
         <input
           type='text'
           name='school'
@@ -28,9 +28,16 @@ class Education extends Component {
         />
         <input
           type='text'
-          name='dateAttended'
-          className='date input'
-          placeholder='Date Attended (MM/YYYY - MM/YYYY)'
+          name='schoolStartDate'
+          className='school-start-date input'
+          placeholder='Start Date'
+          onChange={handleChange}
+        />
+        <input
+          type='text'
+          name='schoolEndDate'
+          className='school-end-date input'
+          placeholder='End Date'
           onChange={handleChange}
         />
       </fieldset>

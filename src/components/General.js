@@ -11,6 +11,7 @@ class General extends Component {
 
     return (
       <fieldset id='general-info'>
+        <legend>General Information</legend>
         <input
           type='text'
           name='firstName'

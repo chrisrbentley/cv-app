@@ -1,56 +1,18 @@
-/* body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-#wrapper {
-  display: flex;
-  padding: 20px;
-  border: 3px solid black;
-  border-radius: 5px;
-  justify-content: center;
-  margin-bottom: 30px;
-}
-
-#form {
-  background-color: green;
-}
-
-#form > h3 {
-  color: blue;
-}
-
-fieldset {
-  border: none;
-}
-
-fieldset {
-  display: flex;
-  flex-flow: column nowrap;
-  gap: 10px;
-  align-items: center;
-}
-
-input {
-  border-radius: 5px;
-  border: solid 1px black;
-  height: 20px;
-  width: 50vw;
-}
- */
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
 body {
   display: flex;
   justify-content: center;
   background-color: #f2f6ed;
   color: #63595c;
+  font-family: 'Poppins', sans-serif;
 }
 
 #wrapper {
   border: 3px solid #404e4d;
   padding: 15px;
   width: 50vw;
+  margin-bottom: 10px;
 }
 
 form {
