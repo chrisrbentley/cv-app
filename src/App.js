@@ -18,10 +18,16 @@ class App extends Component {
       phoneNumber: '111-222-3333',
       location: 'Atlanta, Georgia',
       title: 'Software Engineer',
+      description:
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit.',
       company: 'Spotify',
       workStartDate: '2021',
       workEndDate: 'Present',
       jobDescription: 'Used react to build the front end of web apps.',
+      school: 'Georgia Tech',
+      degree: 'Bachelor of Computer Science',
+      schoolStartDate: '2018',
+      schoolEndDate: '2022',
     };
   }
 
@@ -44,7 +50,7 @@ class App extends Component {
     // conditional render > form submitted? show resume
 
     return (
-      <div>
+      <div id='container'>
         <div id='wrapper'>
           <Form
             handleChange={this.handleChange}
@@ -58,11 +64,16 @@ class App extends Component {
           phoneNumber={this.state.phoneNumber}
           email={this.state.email}
           location={this.state.location}
+          description={this.state.description}
           title={this.state.title}
           company={this.state.company}
           workStartDate={this.state.workStartDate}
           workEndDate={this.state.workEndDate}
           jobDescription={this.state.jobDescription}
+          school={this.state.school}
+          degree={this.state.degree}
+          schoolStartDate={this.state.schoolStartDate}
+          schoolEndDate={this.state.schoolEndDate}
         />
       </div>
     );

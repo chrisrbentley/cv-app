@@ -54,6 +54,19 @@ class General extends Component {
           placeholder='Location'
           onChange={handleChange}
         />
+        {/* <input
+          name='selfDescription'
+          id='selfDescription'
+          placeholder='Description'
+          onChange={handleChange}
+        /> */}
+        <textarea
+          name='description'
+          id='description'
+          cols='30'
+          rows='5'
+          placeholder='Description'
+        ></textarea>
       </fieldset>
     );
   }

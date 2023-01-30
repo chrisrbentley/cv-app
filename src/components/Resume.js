@@ -14,11 +14,16 @@ class Resume extends Component {
       phoneNumber,
       email,
       location,
+      description,
       title,
       company,
       workStartDate,
       workEndDate,
       jobDescription,
+      school,
+      degree,
+      schoolStartDate,
+      schoolEndDate,
     } = this.props;
 
     return (
@@ -37,6 +42,9 @@ class Resume extends Component {
           </div>
         </div>
         <hr />
+        <div className='self-description'>
+          <p>{description}</p>
+        </div>
         <div id='experience-list'>
           <h3 className='subheader'>Work Experience</h3>
           <div className='experience'>
@@ -48,6 +56,17 @@ class Resume extends Component {
               </div>
             </div>
             <div className='job-description'>{jobDescription}</div>
+          </div>
+        </div>
+        <div className='education'>
+          <h3 className='subheader'>Education</h3>
+          <div className='education-list'>
+            <div className='education-item'>
+              <h4 className='degree'>{degree}</h4>
+              <p>
+                {school} | {schoolStartDate} - {schoolEndDate}
+              </p>
+            </div>
           </div>
         </div>
       </div>
