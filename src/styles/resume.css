@@ -1,7 +1,9 @@
 #resume {
   border: 3px solid #404e4d;
-  padding: 30px;
-  width: 50vw;
+  padding: 15px;
+  margin-top: 15px;
+  min-height: 65vh;
+  width: 60vw;
 }
 
 #resume-top {
@@ -27,7 +29,7 @@
 }
 
 .subheader {
-  margin: 0 0 10px 0;
+  margin: 10px 0 10px 0;
 }
 
 p,
@@ -48,4 +50,32 @@ h5 {
   justify-content: space-between;
   align-items: center;
   font-size: 16px;
+}
+
+.education-item {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+
+.degree {
+  margin: 0;
+}
+
+.education-item {
+  margin: 10px 0px 10px 0px;
+}
+
+.self-description > p {
+  word-wrap: break-word;
+}
+
+#email {
+  word-wrap: break-word;
+}
+
+@media screen and (max-width: 600px) {
+  #resume {
+    width: 75vw;
+  }
 }
