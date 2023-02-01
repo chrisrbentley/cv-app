@@ -1,26 +1,17 @@
-import React, { Component } from 'react';
+import React from 'react';
 import General from './General';
 import Education from './Education';
 import Work from './Work';
 import '../styles/form.css';
 
-class Form extends Component {
-  constructor(props) {
-    super(props);
-  }
-
-  render() {
-    const { onFormSubmit } = this.props;
-    const { handleChange } = this.props;
-
-    return (
-      <form action='' onSubmit={onFormSubmit} id='form'>
-        <General handleChange={handleChange} />
-        <Education handleChange={handleChange} />
-        <Work handleChange={handleChange} />
-      </form>
-    );
-  }
-}
+const Form = (props) => {
+  return (
+    <form>
+      <General handleChange={props.handleChange} />
+      <Education handleChange={props.handleChange} />
+      <Work handleChange={props.handleChange} />
+    </form>
+  );
+};
 
 export default Form;
