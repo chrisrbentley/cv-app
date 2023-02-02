@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import '../styles/resume.css';
 
 const Resume = (props) => {
@@ -15,7 +15,7 @@ const Resume = (props) => {
         </div>
         <div id='contact-info'>
           <p>{inputs.phoneNumber}</p>
-          <p>{inputs.email}</p>
+          <p id='email'>{inputs.email}</p>
           <p>{inputs.location}</p>
         </div>
       </div>

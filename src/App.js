@@ -23,7 +23,6 @@ const App = () => {
           handleInputChange={handleInputChange}
         />
       </div>
-      {/* {showResume ? <Resume /> : null} */}
       <Resume inputs={inputs} />
     </div>
   );

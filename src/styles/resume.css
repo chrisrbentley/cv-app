@@ -1,9 +1,9 @@
 #resume {
   border: 3px solid #404e4d;
   padding: 15px;
-  max-width: 80vw;
   margin-top: 15px;
   min-height: 65vh;
+  width: 60vw;
 }
 
 #resume-top {
@@ -64,4 +64,18 @@ h5 {
 
 .education-item {
   margin: 10px 0px 10px 0px;
+}
+
+.self-description > p {
+  word-wrap: break-word;
+}
+
+#email {
+  word-wrap: break-word;
+}
+
+@media screen and (max-width: 600px) {
+  #resume {
+    width: 75vw;
+  }
 }

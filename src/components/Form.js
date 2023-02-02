@@ -8,9 +8,8 @@ const Form = (props) => {
   return (
     <form>
       <General handleInputChange={props.handleInputChange} />
-      <Education handleInputChange={props.handleInputChange} />
       <Work handleInputChange={props.handleInputChange} />
-      <input type='submit' />
+      <Education handleInputChange={props.handleInputChange} />
     </form>
   );
 };
