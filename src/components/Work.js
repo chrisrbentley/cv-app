@@ -1,57 +1,51 @@
-import React, { Component } from 'react';
+import React from 'react';
 import '../styles/form.css';
 
-class Work extends Component {
-  constructor(props) {
-    super(props);
-  }
+const Work = (props) => {
+  const { handleInputChange } = props;
 
-  render() {
-    const { handleChange } = this.props;
+  return (
+    <fieldset className='work-experience'>
+      <legend>Work Experience</legend>
+      <input
+        type='text'
+        name='company'
+        className='company'
+        placeholder='Company'
+        onChange={handleInputChange}
+      />
+      <input
+        type='text'
+        name='title'
+        className='title'
+        placeholder='Title'
+        onChange={handleInputChange}
+      />
 
-    return (
-      <fieldset className='work-experience'>
-        <legend>Work Experience</legend>
-        <input
-          type='text'
-          name='company'
-          className='company'
-          placeholder='Company'
-          onChange={handleChange}
-        />
-        <input
-          type='text'
-          name='title'
-          className='title'
-          placeholder='Title'
-          onChange={handleChange}
-        />
+      <input
+        type='text'
+        name='workStartDate'
+        className='workStartDate'
+        placeholder='Start Date'
+        onChange={handleInputChange}
+      />
 
-        <input
-          type='text'
-          name='workStartDate'
-          className='workStartDate'
-          placeholder='Start Date'
-          onChange={handleChange}
-        />
-
-        <input
-          type='text'
-          name='workEndDate'
-          className='workEndDate'
-          placeholder='End Date'
-          onChange={handleChange}
-        />
-        <input
-          type='text'
-          name='jobDescription'
-          className='job-description'
-          placeholder='Job Description'
-          onChange={handleChange}
-        />
-      </fieldset>
-    );
-  }
-}
+      <input
+        type='text'
+        name='workEndDate'
+        className='workEndDate'
+        placeholder='End Date'
+        onChange={handleInputChange}
+      />
+      <input
+        type='text'
+        name='jobDescription'
+        className='job-description'
+        placeholder='Job Description'
+        onChange={handleInputChange}
+      />
+    </fieldset>
+  );
+};
 
 export default Work;

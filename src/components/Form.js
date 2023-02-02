@@ -7,9 +7,10 @@ import '../styles/form.css';
 const Form = (props) => {
   return (
     <form>
-      <General handleChange={props.handleChange} />
-      <Education handleChange={props.handleChange} />
-      <Work handleChange={props.handleChange} />
+      <General handleInputChange={props.handleInputChange} />
+      <Education handleInputChange={props.handleInputChange} />
+      <Work handleInputChange={props.handleInputChange} />
+      <input type='submit' />
     </form>
   );
 };

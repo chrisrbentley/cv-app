@@ -10,28 +10,28 @@ const Education = (props) => {
         name='school'
         className='school input'
         placeholder='School'
-        onChange={props.handleChange}
+        onChange={props.handleInputChange}
       />
       <input
         type='text'
         name='degree'
         className='degree input'
         placeholder='Degree'
-        onChange={props.handleChange}
+        onChange={props.handleInputChange}
       />
       <input
         type='text'
         name='schoolStartDate'
         className='school-start-date input'
         placeholder='Start Date'
-        onChange={props.handleChange}
+        onChange={props.handleInputChange}
       />
       <input
         type='text'
         name='schoolEndDate'
         className='school-end-date input'
         placeholder='End Date'
-        onChange={props.handleChange}
+        onChange={props.handleInputChange}
       />
     </fieldset>
   );
