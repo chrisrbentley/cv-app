@@ -1,10 +1,10 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 
 const useForm = () => {
   const [inputs, setInputs] = useState({});
 
   const handleInputChange = (e) => {
-    setInputs((inputs) => ({ ...inputs, [e.target.name]: e.target.value }));
+    setInputs({ ...inputs, [e.target.name]: e.target.value });
   };
 
   return {
@@ -82,7 +82,6 @@ const useGenerator = () => {
     const list = [...educationInputs];
     list[index][name] = value;
     setEducationInputs(list);
-    console.log(educationInputs);
   };
 
   return {

@@ -1,10 +1,10 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Form from './components/Form';
 import Resume from './components/Resume';
 import './styles/form.css';
 import { useForm, useGenerator } from './customHooks';
 
-const App = () => {
+function App() {
   const { inputs, handleInputChange } = useForm();
   const {
     workInputs,
@@ -18,8 +18,8 @@ const App = () => {
   } = useGenerator();
 
   return (
-    <div id='container'>
-      <div id='wrapper'>
+    <div id="container">
+      <div id="wrapper">
         <Form
           inputs={inputs}
           handleInputChange={handleInputChange}
@@ -40,6 +40,6 @@ const App = () => {
       />
     </div>
   );
-};
+}
 
 export default App;
