@@ -24,6 +24,15 @@ const useGenerator = () => {
     },
   ]);
 
+  const [educationInputs, setEducationInputs] = useState([
+    {
+      school: '',
+      degree: '',
+      schoolStartDate: '',
+      schoolEndDate: '',
+    },
+  ]);
+
   const addWorkInputs = () => {
     setWorkInputs([
       ...workInputs,
@@ -37,10 +46,28 @@ const useGenerator = () => {
     ]);
   };
 
+  const addEducationInputs = () => {
+    setEducationInputs([
+      ...educationInputs,
+      {
+        school: '',
+        degree: '',
+        schoolStartDate: '',
+        schoolEndDate: '',
+      },
+    ]);
+  };
+
   const removeWorkInputs = (index) => {
     const field = [...workInputs];
     field.splice(index, 1);
     setWorkInputs(field);
+  };
+
+  const removeEducationInputs = (index) => {
+    const field = [...educationInputs];
+    field.splice(index, 1);
+    setEducationInputs(field);
   };
 
   const handleWorkChange = (index, e) => {
@@ -50,11 +77,23 @@ const useGenerator = () => {
     setWorkInputs(list);
   };
 
+  const handleEducationChange = (index, e) => {
+    const { name, value } = e.target;
+    const list = [...educationInputs];
+    list[index][name] = value;
+    setEducationInputs(list);
+    console.log(educationInputs);
+  };
+
   return {
     workInputs,
     addWorkInputs,
-    handleWorkChange,
     removeWorkInputs,
+    handleWorkChange,
+    educationInputs,
+    addEducationInputs,
+    removeEducationInputs,
+    handleEducationChange,
   };
 };
 

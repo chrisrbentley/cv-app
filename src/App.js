@@ -6,8 +6,16 @@ import { useForm, useGenerator } from './customHooks';
 
 const App = () => {
   const { inputs, handleInputChange } = useForm();
-  const { workInputs, addWorkInputs, handleWorkChange, removeWorkInputs } =
-    useGenerator();
+  const {
+    workInputs,
+    addWorkInputs,
+    removeWorkInputs,
+    handleWorkChange,
+    educationInputs,
+    addEducationInputs,
+    removeEducationInputs,
+    handleEducationChange,
+  } = useGenerator();
 
   return (
     <div id='container'>
@@ -17,11 +25,19 @@ const App = () => {
           handleInputChange={handleInputChange}
           workInputs={workInputs}
           addWorkInputs={addWorkInputs}
-          handleWorkChange={handleWorkChange}
           removeWorkInputs={removeWorkInputs}
+          handleWorkChange={handleWorkChange}
+          educationInputs={educationInputs}
+          addEducationInputs={addEducationInputs}
+          removeEducationInputs={removeEducationInputs}
+          handleEducationChange={handleEducationChange}
         />
       </div>
-      <Resume inputs={inputs} workInputs={workInputs} />
+      <Resume
+        inputs={inputs}
+        workInputs={workInputs}
+        educationInputs={educationInputs}
+      />
     </div>
   );
 };

@@ -2,7 +2,7 @@ import React from 'react';
 import '../styles/resume.css';
 
 const Resume = (props) => {
-  const { inputs, workInputs } = props;
+  const { inputs, workInputs, educationInputs } = props;
 
   return (
     <div id='resume'>
@@ -23,6 +23,7 @@ const Resume = (props) => {
       <div className='self-description'>
         <p>{inputs.description}</p>
       </div>
+
       <div className='experience-list'>
         <h3 className='subheader'>Work Experience</h3>
         {workInputs.map((workExperience, index) => {
@@ -43,17 +44,23 @@ const Resume = (props) => {
           );
         })}
       </div>
+
       <div className='education'>
         <h3 className='subheader'>Education</h3>
-        <div className='education-list'>
-          <div className='education-item'>
-            <h4 className='degree'>{inputs.degree}</h4>
-            <p>
-              {inputs.school} | {inputs.schoolStartDate} -{' '}
-              {inputs.schoolEndDate}
-            </p>
-          </div>
-        </div>
+        {educationInputs.map((educationExperience, index) => {
+          return (
+            <div className='education-list' key={index}>
+              <div className='education-item'>
+                <h4 className='degree'>{educationExperience.degree}</h4>
+                <p>
+                  {educationExperience.school} |{' '}
+                  {educationExperience.schoolStartDate} -{' '}
+                  {educationExperience.schoolEndDate}
+                </p>
+              </div>
+            </div>
+          );
+        })}
       </div>
     </div>
   );

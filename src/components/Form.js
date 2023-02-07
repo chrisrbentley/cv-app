@@ -5,8 +5,16 @@ import Work from './Work';
 import '../styles/form.css';
 
 const Form = (props) => {
-  const { workInputs, addWorkInputs, handleWorkChange, removeWorkInputs } =
-    props;
+  const {
+    workInputs,
+    addWorkInputs,
+    handleWorkChange,
+    removeWorkInputs,
+    educationInputs,
+    addEducationInputs,
+    removeEducationInputs,
+    handleEducationChange,
+  } = props;
 
   return (
     <form>
@@ -18,7 +26,13 @@ const Form = (props) => {
         handleWorkChange={handleWorkChange}
         removeWorkInputs={removeWorkInputs}
       />
-      <Education handleInputChange={props.handleInputChange} />
+      <Education
+        handleInputChange={props.handleInputChange}
+        educationInputs={educationInputs}
+        addEducationInputs={addEducationInputs}
+        removeEducationInputs={removeEducationInputs}
+        handleEducationChange={handleEducationChange}
+      />
     </form>
   );
 };

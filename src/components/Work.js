@@ -18,7 +18,6 @@ const Work = (props) => {
         {workInputs.map((field, index) => {
           return (
             <div className='experience' key={index}>
-              <p>Experience {workInputs.length}</p>
               <input
                 type='text'
                 name='company'
