@@ -2,28 +2,26 @@ import React, { useState } from 'react';
 import Form from './components/Form';
 import Resume from './components/Resume';
 import './styles/form.css';
-import useForm from './customHooks';
+import { useForm, useGenerator } from './customHooks';
 
 const App = () => {
   const { inputs, handleInputChange } = useForm();
-
-  const [showResume, setShowResume] = useState(false);
-
-  const onFormSubmit = (e) => {
-    e.preventDefault();
-    showResume ? setShowResume(false) : setShowResume(true);
-  };
+  const { workInputs, addWorkInputs, handleWorkChange, removeWorkInputs } =
+    useGenerator();
 
   return (
     <div id='container'>
       <div id='wrapper'>
         <Form
-          onFormSubmit={onFormSubmit}
           inputs={inputs}
           handleInputChange={handleInputChange}
+          workInputs={workInputs}
+          addWorkInputs={addWorkInputs}
+          handleWorkChange={handleWorkChange}
+          removeWorkInputs={removeWorkInputs}
         />
       </div>
-      <Resume inputs={inputs} />
+      <Resume inputs={inputs} workInputs={workInputs} />
     </div>
   );
 };

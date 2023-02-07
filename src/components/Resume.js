@@ -2,7 +2,7 @@ import React from 'react';
 import '../styles/resume.css';
 
 const Resume = (props) => {
-  const { inputs } = props;
+  const { inputs, workInputs } = props;
 
   return (
     <div id='resume'>
@@ -23,18 +23,25 @@ const Resume = (props) => {
       <div className='self-description'>
         <p>{inputs.description}</p>
       </div>
-      <div id='experience-list'>
+      <div className='experience-list'>
         <h3 className='subheader'>Work Experience</h3>
-        <div className='experience'>
-          <div className='exp-heading'>
-            <h5 className='job-title'>{inputs.title}</h5>
-            <div className='exp-details'>
-              <span className='company'>{inputs.company}</span> |{' '}
-              {inputs.workStartDate} - {inputs.workEndDate}
+        {workInputs.map((workExperience, index) => {
+          return (
+            <div className='experience' key={index}>
+              <div className='exp-heading'>
+                <h5 className='job-title'>{workExperience.title}</h5>
+
+                <div className='exp-details'>
+                  <span className='company'>{workExperience.company}</span> |{' '}
+                  {workExperience.workStartDate} - {workExperience.workEndDate}
+                </div>
+              </div>
+              <div className='job-description'>
+                {workExperience.jobDescription}
+              </div>
             </div>
-          </div>
-          <div className='job-description'>{inputs.jobDescription}</div>
-        </div>
+          );
+        })}
       </div>
       <div className='education'>
         <h3 className='subheader'>Education</h3>

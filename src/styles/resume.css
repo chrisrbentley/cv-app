@@ -38,6 +38,12 @@ h5 {
   margin: 0;
 }
 
+.experiences {
+  display: flex;
+  flex-flow: column wrap;
+  gap: 20px;
+}
+
 .experience {
   display: flex;
   flex-flow: column wrap;
