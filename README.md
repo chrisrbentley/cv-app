@@ -1,6 +1,4 @@
-# Getting Started with Create React App
-
-CV Application
+# CV Application
 
 CV Application using React & Javascript
 
